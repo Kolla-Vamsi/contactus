@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Json.js"></script>
+    <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            font-family:'Times New Roman', Times, serif;
+            margin: 0px auto;
+            text-align: center;
+            margin-top:50px;
+        }
+        .signalContainer {
+            background-color: black ;
+            width:29px;
+            margin:0px auto;
+            margin-top: -110px;
+            border-radius: 25px;
+
+        }
+        #stopLight{
+            border-radius: 20px;
+            color:#fff;
+            width:20px;
+            height:20px;
+            background-color: white;
+            margin-left: 5px;
+            
+        }
+        #readyLight {
+            border-radius: 20px;
+            color:#fff;
+            width:20px;
+            height:20px;
+            background-color: white;
+            margin-left: 5px;
+        }
+        #goLight {
+            border-radius: 20px;
+            color:#fff;
+            width:20px;
+            height:20px;
+            background-color: white;
+            margin-left: 5px;
+        }
+        .bttn {
+            margin-left:400px;
+            margin-top: 60px;
+            row-gap: 20px;
+            column-gap: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="row">
+
+            <p>Traffic Light</p>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 bttn d-flex flex-column">
+            <button class="buttonRed" id="StopButton" onclick="RedButton()" id="red">RedButton</button><br><br>
+            <button class="buttonYellow" id="ReadyButton" onclick="YellowButton()" id="Yellow">YellowButton</button><br><br>
+            <button class="buttonGreen" id="GoButton" onclick="GreenButton()" id="Green">GreenButton</button>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 signalContainer d-flex flex-column justify-content-center">
+                <div id="stopLight">.</div><br>
+                <div id="readyLight">.</div><br>
+                <div id="goLight">.</div><br>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    function RedButton(){
+    document.getElementById('stopLight').style.backgroundColor = "red";
+    document.getElementById('StopButton').style.backgroundColor = "red";
+
+    document.getElementById('readyLight').style.backgroundColor = "#fff";
+    document.getElementById('ReadyButton').style.backgroundColor = "#fff";
+
+    document.getElementById('goLight').style.backgroundColor = "#fff";
+    document.getElementById('GoButton').style.backgroundColor = "#fff";
+
+}
+function YellowButton() {
+    document.getElementById('stopLight').style.backgroundColor = "#fff";
+    document.getElementById('StopButton').style.backgroundColor = "#fff";
+
+    document.getElementById('readyLight').style.backgroundColor = "yellow";
+    document.getElementById('ReadyButton').style.backgroundColor = "yellow";
+
+    document.getElementById('goLight').style.backgroundColor = "#fff";
+    document.getElementById('GoButton').style.backgroundColor = "#fff";
+}
+function GreenButton() {
+    document.getElementById('stopLight').style.backgroundColor = "#fff";
+    document.getElementById('StopButton').style.backgroundColor = "#fff";
+
+    document.getElementById('readyLight').style.backgroundColor = "#fff";
+    document.getElementById('ReadyButton').style.backgroundColor = "#fff";
+
+    document.getElementById('goLight').style.backgroundColor = "green";
+    document.getElementById('GoButton').style.backgroundColor = "green";
+}
+</script>
+</body>
+</html>
